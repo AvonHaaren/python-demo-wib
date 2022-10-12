@@ -1,0 +1,5 @@
+__pycache__/
+.ipynb_checkpoints/
+
+historical_data.csv
+fit_results.json
