@@ -10,13 +10,13 @@
 
 # Installationsanleitung
 
+
+## macOS
+
 Viele (eigentlich alle) der folgenden Schritte müssen aus einem Terminal ausgeführt werden. Wenn Du vorher noch nie mit einem Terminal gearbeitet hast, keine Sorge, das kriegen wir hin!
 
 Alles, was Du installierst, ist zusammen ca. 5GB groß. So viel Speicher wirst Du also mindestens brauchen.
 Es gibt am Ende eine Anleitung zum Deinstallieren, wenn Du alles wieder loswerden willst, was Du für den Workshop installiert hast.
-
-
-## macOS
 
 *Du kannst ein Terminal öffnen, indem Du Cmd+Leertaste drückst, dann Terminal eingibst und Enter drückst. Das sieht dann ungefähr so aus:*
 ![Terminal](docs/terminal.png)
