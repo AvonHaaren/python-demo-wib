@@ -2,14 +2,21 @@
 27.10.2022, Andreas von Haaren
 
 
-## Installationsanleitung
+[macOS Installation](#macos)  
+[macOS Deinstallation](#macos-1)  
+[Windows Installation](#windows)  
+[Windows Deinstallation](#windows-1)  
+
+
+# Installationsanleitung
 
 Viele (eigentlich alle) der folgenden Schritte müssen aus einem Terminal ausgeführt werden. Wenn Du vorher noch nie mit einem Terminal gearbeitet hast, keine Sorge, das kriegen wir hin!
 
 Alles, was Du installierst, ist zusammen ca. 5GB groß. So viel Speicher wirst Du also mindestens brauchen.
 Es gibt am Ende eine Anleitung zum Deinstallieren, wenn Du alles wieder loswerden willst, was Du für den Workshop installiert hast.
 
-### macOS
+
+## macOS
 
 *Du kannst ein Terminal öffnen, indem Du Cmd+Leertaste drückst, dann Terminal eingibst und Enter drückst. Das sieht dann ungefähr so aus:*
 ![Terminal](docs/terminal.png)
@@ -47,25 +54,40 @@ Es gibt am Ende eine Anleitung zum Deinstallieren, wenn Du alles wieder loswerde
    ```
    aus.
 
-1. Install pyenv and Visual Studio Code
-2. Install Python using pyenv
-3. Install poetry
-4. Clone this repository
+#### 3. Die richtige Python Version nutzen
 
-Note: The | character on a German mac keyboard can be accessed using Alt+7
-
-### Windows
-
-1. Install Visual Studio Code
-2. Install pyenv-win
-3. Install poetry
-4. Clone this repository
+#### 4. Installation von Python Modulen
+   Wir benötigen im Workshop einige sogenannte Packages, die uns als Programmierern Arbeit abnehmen. Du kannst die benötigten Pakete mit
+   ```
+   pip3 install lmfit numpy yfinance matplotlib pandas
+   ```
+   installieren.
 
 
+## Windows
+   Auf Windows ist es tatsächlich recht einfach, eine funktionierende Entwicklungsumgebung für Python zu installieren.
 
-## Deinstallation
 
-### macOS
+#### 1. Installation von Python
+   [Dieser Link](https://www.python.org/ftp/python/3.10.8/python-3.10.8-amd64.exe) lädt den Installer für Python 3.10.8 herunter. Führe den Installer einfach wie für jedes andere Programm aus, alle default Einstellungen können einfach übernommen werden. Du kannst die Installation überprüfen, indem Du Powershell/Windows Terminal öffnest (*Rechtsklick auf Startmenü, dann sollte eins der beiden auftauchen*) und dort den Befehl ```py``` eingibst und mit Enter bestätigst. Dann startet der sogenannte Python Interpreter. Wenn die angezeigte Version ```3.10.8``` ist, hat alles geklappt. Du kannst den Interpreter mit ```exit()``` + Enter verlassen und das Fenster schließen.
+
+#### 2. Installation von Python Modulen
+   Wir benötigen im Workshop einige sogenannte Packages, die uns als Programmierern Arbeit abnehmen. Du kannst die benötigten Pakete mit
+   ```
+   py -m pip install lmfit numpy yfinance matplotlib pandas
+   ```
+   installieren.
+
+#### 3. Installation von Visual Studio Code
+   Visual Studio Code (VSCode) ist der Codeeditor, den wir im Workshop benutzen.
+   [Hier](https://code.visualstudio.com/download#) findest Du den Installer für VSCode.
+
+
+---
+
+# Deinstallation
+
+## macOS
 
 #### Python, VSCode und Homebrew
 Die Deinstallation ist sehr einfach:
@@ -89,5 +111,20 @@ Die Zeile mit "brew shellenv" musst Du löschen, dann speichern und das Fenster 
 #### XCode Command Line Tools
 Die offizielle Dokumentation von Apple sagt, dass man einfach den Ordner löschen soll, wo diese installiert sind. Öffne dazu im Finder den Ordner "/Library/Developer" und lösche dort den Ordner "CommandLineTools". Gegebenenfalls musst Du dein Passwort eingeben.
 
+
+#### Fertig 🎉
+
+
+
+## Windows
+
+#### VSCode
+Deinstalliere VSCode mittels *Startmenü > Apps und Programme deinstallieren*.
+
+#### Python
+Führe den Installer erneut aus, aber wähle die Option *Installation ändern/Entfernen*
+
+#### pip Cache
+Die Installation der Packages hinterlässt ein paar Dateien. Tippe in einem Windows Explorer in der Pfadleiste ```%LOCALAPPDATA%``` ein und lösche den Ordner "pip"
 
 #### Fertig 🎉
