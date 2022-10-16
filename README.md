@@ -39,6 +39,7 @@ Es gibt am Ende eine Anleitung zum Deinstallieren, wenn Du alles wieder loswerde
    ```
    dein-benutzername@Dein-MBP ~ % 
    ```
+   Je nachdem, welche Version von macOS Du benutzt, gibt Dir homebrew noch einige Anweisungen, Kommandos, die Du noch selbst ausführen musst. Diese starten mit ```echo```. Kopiere diese einfach Zeile für Zeile, füge sie nach ```dein-benutzername@Dein-MBP ~ % ``` ein und drücke Enter. Diese Kommandos haben keinen Output, es sei denn es geht etwas schief.
    Jetzt kannst du das Terminal Fenster schließen und ein neues öffnen, damit die geänderten Einstellungen übernommen werden.
    Wenn alles geklappt hat, müsste der Command
    ```
@@ -55,6 +56,8 @@ Es gibt am Ende eine Anleitung zum Deinstallieren, wenn Du alles wieder loswerde
    aus.
 
 #### 3. Die richtige Python Version nutzen
+   Wenn Du jetzt ```python --version``` ausführst, kann es sein, dass Dir ```3.9.6``` oder etwas anderes angezeigt wird.
+   Starte bitte Dein Terminal noch einmal neu, dann sollte Dir der gleiche Befehl ```3.10.8``` oder neuer anzeigen.
 
 #### 4. Installation von Python Modulen
    Wir benötigen im Workshop einige sogenannte Packages, die uns als Programmierern Arbeit abnehmen. Du kannst die benötigten Pakete mit
@@ -97,7 +100,11 @@ Führe einfach die folgenden Kommandos hintereinander aus:
 brew uninstall python visual-studio-code
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
 ```
-Das zweite Skript deinstalliert homebrew. Wenn das Skript fertig ist, werden einige Ordner aufgelistet, die Du gegebenenfalls noch manuell löschen musst. Dazu kannst du beispielsweise in einem Finder Fenster Shift+Cmd+G drücken und dann den übergeordneten Ordner eingeben, um dann von dort alles weitere zu löschen.
+Das zweite Skript deinstalliert homebrew. Wenn das Skript fertig ist, werden einige Ordner aufgelistet, die Du gegebenenfalls noch manuell löschen musst. Auf einem Apple Silicon Mac ist das beispielsweise ```/opt/homebrew```. Gebe im Terminal einfach
+```
+open [hier den vollständigen Pfad zum Ordner eingeben]
+``` 
+ein, dann öffnet sich ein Finder Fenster mit dem Ordner.
 
 Je nachdem, auf welcher Version von macOS Du bist, musst Du auch noch eine Einstellung für das Terminal ändern. Auf einem neuen MacBook mit Apple Silicon kannst Du dazu in einem Terminal
 ```
